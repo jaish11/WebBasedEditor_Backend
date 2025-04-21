@@ -22,6 +22,9 @@ app.use(cookieParser());
 app.use(express.json());
 
 // Routes
+app.get("/", (req, res) => {
+  return res.send("API is running...");
+});
 app.use("/api/chats", chatRoutes);
 app.use("/api/userchats", userChatRoutes);
 
